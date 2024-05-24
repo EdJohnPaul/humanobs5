@@ -1,0 +1,5 @@
+emp_uid,type,amount,remarks
+374,Add,1719,"Adjustment for last Feb 30, 2017 payroll"
+374,Less,100,Deduction for Pag-ibig
+374,Less,191.98,Deduction for Philhealth
+374,Less,560,Deduction for SSS

@@ -1,0 +1,24 @@
+body {
+    background-image: url(../img/bg_login.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.4);
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    padding-top: -30px;
+}
+
+/* @font-face {
+    font-family: cairo;
+    src: url(Inter.ttf);
+} */
+
+/* .inter{
+    font-family: cairo;
+    letter-spacing: 1px;
+} */
+
+.body       {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}

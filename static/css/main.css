@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none !important; 
+    list-style: none;
+    outline-style: none;
+}
+
+body{
+    
+    background-color: #EFEFEF;
+}
+
+/*-------------------------
+        Layout
+---------------------------*/
+#layout{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    color: #383838;
+}
+
+#sideCanvas{
+    height: 100vh;
+    width: 300px; 
+    background-color: white;
+    transition: all;
+    position: fixed;
+}
+
+#navCanvas{
+    height: 12vh;
+    margin-left: 300px;
+}
+
+#canvas{
+    height: 88vh;
+    margin-left: 300px;
+}
+
+
+/*-------------------------
+        HEADER
+---------------------------*/
+#head{
+    height: 12vh; 
+    /* padding: 32px; */
+    background-color: #107A71;
+}
+
+#head i{
+    font-size: 22px;
+}
+
+
+
+
+/*-------------------------
+    Navbar (Mobile View)
+---------------------------*/
+#logo-nav{
+    height: 12vh;
+    background-color: #107A71;
+}
+
+.nav-link {
+    color: white;
+    font-size: 18px;
+    margin-top: 8px;
+    border-radius: 10px;
+}
+.navbar-collapse {
+    position: fixed;
+    top: 10%;
+    width: 100%;
+    background-color: #107A71; 
+    z-index: 1000;
+    border-radius: 5px;
+    box-shadow: rgba(118, 118, 118, 0.2) 0px 8px 24px;
+}
+
+/* dropdown menu bg */
+.dropdown-menu {
+    background-color: transparent !important;
+}
+
+/* dropdown menu style */
+.dropdown-menu a{
+    color: white;
+    font-size: 17px;
+    margin: -6px;
+    margin-left: 18px;
+}
+
+
+/* active navbar */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:hover {
+    background-color: white !important;
+    color: #107A71 !important;
+    border-radius: 5px;
+}
+
+hr{
+    border-color: #23847C;
+}
+
+.logout {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 18px;
+}
+
+
+/*----------------------------
+    Sidebar (Desktop View)
+------------------------------*/
+
+/* SIDE HEADER */
+#side-header{
+    height:12vh; 
+    background-color: #107A71;
+}
+
+#side-header img{
+    height: 75px; 
+}
+
+#side-btn{
+    height: 88vh;
+    border-right: #e2e2e2 1px solid;
+}
+
+#side-user{
+    padding-top: 90px;
+}
+
+#side-circle{
+    width: 100px;
+    height: 100px; 
+    background-color:#D9D9D9; 
+    color:#898989; 
+    font-size: 60px; 
+}
+
+#side-btn #side-user p{
+    font-size: 16px;
+}
+
+#side-user hr{
+    border-color: #eeeeee;
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+
+.sidebar-link{
+    margin-top: 6px;
+    color: #5A5A5A;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.sidebar-item .sidebar-dropdown{
+    
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+.sidebar-item ul a{
+    font-size: 14px;
+    line-height: 30px;
+    margin-left: 30px;
+}
+
+#icon{
+    margin-right: 18px;
+    /* margin-top: px; */
+}
+
+#side-menu a{
+    padding-left: 20px;
+    padding-right: 15px;
+}
+
+.sidebar-drop{
+    color: #5A5A5A;
+}
+
+.sidebar-drop:hover{
+    color: #107A71;
+}
+
+/* dropdown arrow */
+.rotate {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease; /* Optional: Add smooth transition */
+}
+
+
+.navbar-nav .sidebar-link.active,
+.navbar-nav .sidebar-link:focus,
+.navbar-nav .sidebar-link:hover {
+    background-color: #107A71 !important;
+    color: white !important;
+    border-radius: 5px;
+}
+
+.navbar-nav .sidebar-drop.active,
+.navbar-nav .sidebar-drop:focus,
+.navbar-nav .sidebar-drop:hover {
+    color: #107A71 !important;
+    border-radius: 5px;
+}
+
+.side-scroll {
+    overflow-y: auto; 
+    max-height: 88vh; 
+    /* scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.05); */
+}
+
+.side-scroll::-webkit-scrollbar {
+    width: 3px; 
+}
+
+.side-scroll::-webkit-scrollbar-thumb {
+    background-color: rgba(121, 121, 121, 0.5);
+}
+
+
+
+/*-------------------------
+        MAIN
+---------------------------*/
+
+#main{
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 24px;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    #navCanvas, #canvas {
+        margin-left: 0; 
+    }
+
+    #main{
+        padding-left: 17px;
+        padding-right: 17px;
+        padding-top: 24px;
+    }   
+
+}

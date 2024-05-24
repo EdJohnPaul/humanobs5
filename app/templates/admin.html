@@ -1,0 +1,1165 @@
+
+<script type="text/html" id="admin-nav">
+
+    <!-- HEADER -->
+    <div class="w-100">
+        <div class="d-none d-md-block ">    
+            <div id="head" class="d-flex justify-content-between align-items-center text-white p-4 sticky-top">
+                <div id="toggle-sidebar" style="cursor: pointer;">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div style="cursor: pointer;">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile View -->
+    <div class="d-block d-md-none w-100 sticky-top">
+        <nav id="logo-nav" class="navbar navbar-expand-xl navbar-light">
+            <div class="w-100">
+                <div class="h-100 d-flex justify-content-between align-items-center px-3">
+                    <div class="logo">
+                        <img src="/static/img/logo.png" style="height: 7vh;">
+                    </div>
+                    <button class="navbar-toggler border px-3 py-2 rounded text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+        
+                <div class="collapse navbar-collapse pb-4" id="navbarSupportedContent">
+
+                    <hr class="mx-4" style="margin-top: 25px; margin-bottom: 6px;">
+        
+                    <ul class="navbar-nav me-auto mb-2 px-3 ">
+                        <li class="nav-item">
+                            <a class="nav-link px-2 py-2.5" aria-current="page" href="#/dashboard/">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-2 py-2.5" aria-current="page" href="#/master-file/">Master File</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link mrequest_btn d-flex justify-content-between align-items-center text-white px-2 py-2.5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="flex items-center">
+                                    <span class="group-hover:text-white">Request</span>
+                                </div>
+                                <div>
+                                    <i id="mrequest-arrow" class="fa-solid fa-angle-down"></i>
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu border-0" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item p-2" href="#">• Timesheet</a></li>
+                                <li><a class="dropdown-item p-2" href="#">• Leave / Absent</a></li>
+                                <li><a class="dropdown-item p-2" href="#">• Overtime</a></li>
+                                <li><a class="dropdown-item p-2" href="#">• Holiday & Restday</a></li>
+                                <li><a class="dropdown-item p-2" href="#">• Adjustment</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link mreport_btn d-flex justify-content-between align-items-center text-white px-2 py-2.5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="flex items-center">
+                                    <span>Report</span>
+                                </div>
+                                <div>
+                                    <i id="mreport-arrow" class="fa-solid fa-angle-down"></i>
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu border-0" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item p-2" href="#">• Important DTR</a></li>
+                                <li><a class="dropdown-item p-2" href="#">• Timekeeping Summary</a></li>
+                                <li><a class="dropdown-item p-2" href="#">• Timekeeping Logs</a></li>
+                                <li><a class="dropdown-item p-2" href="#">• Event Logs</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link px-2 py-2.5" href="#" tabindex="-1" aria-disabled="true">Settings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-2 py-2.5" href="#" tabindex="-1" aria-disabled="true">Scheduling</a>
+                        </li>
+                    </ul>
+
+                    <hr class="my-3 mx-4">
+
+                    <button class="logout d-flex align-items-center gap-2 mb-3 mx-4" type="button">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <div class="align-self-center">Logout</div>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </div>
+</script>
+
+<!-- Desktop View (SIDEBAR)-->
+<script type="text/html" id="side-nav" class="">
+    <div class="d-none d-md-block">
+        <div id="side-header" class="d-flex justify-content-center align-items-center"> 
+            <img src="/static/img/logo.png">
+        </div>
+
+        <!-- Sidebar Content -->
+        <div class="side-scroll">
+            <div id="side-btn">
+                <!-- Sidebar user -->
+                <div id="side-user">
+                    <div class="d-flex flex-column align-items-center">
+                        <div id="side-circle" class="d-flex align-items-center justify-content-center rounded-circle">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <p class="mt-2">John Doe</p>
+                    </div>
+                    <hr class="mx-3">
+                </div>
+
+                <!-- Sidebar menu --> 
+                <div class="h-full">
+                    <ul id="side-menu" class="navbar-nav me-auto mb-2 px-2">
+                        <li>
+                            <a href="#/dashboard/" class="sidebar-link d-flex align-items-center">
+                                <i id="icon" class="fa-solid fa-house"></i>
+                                <span class="" style="margin-left: -4px;">Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#/master-file/" class="sidebar-link d-flex align-items-center">
+                                <i id="icon" class="fas fa-user"></i>
+                                <span class="align-middle">Master File</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#/resume/" class="sidebar-link d-flex align-items-center">
+                                <i id="icon" class="fa-regular fa-note-sticky"></i>
+                                <span class="align-middle">Resume / Applicants</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#/resume-application/" id="request_btn" class="sidebar-link collapsed d-flex align-items-center justify-content-between" data-bs-toggle="collapse" data-bs-target="#request" aria-expanded="false" aria-control="request">
+                                <div class="d-flex align-items-center">
+                                    <i id="icon" class="fa-solid fa-gear"></i>
+                                    <span class="">Benefits</span>
+                                </div>
+                                <i id="request-arrow" class="fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul id="request" class="sidebar-dropdown collapse rounded" data-bs-parent="#sidebar">
+                                <li class="sidebar-item w-100">
+                                    <a href="#" class="sidebar-drop">• Cash Advance</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" id="report_btn" class="sidebar-link collapsed d-flex align-items-center justify-content-between" data-bs-toggle="collapse" data-bs-target="#report" aria-expanded="false" aria-control="report">
+                                <div class="d-flex align-items-center">
+                                    <i id="icon" class="fa-solid fa-gear"></i>
+                                    <span class="">Settings</span>
+                                </div>
+                                <i id="report-arrow" class="fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul id="report" class="sidebar-dropdown collapse pb-2 mb-3 rounded" data-bs-parent="#sidebar">
+                                <li class="sidebar-item">
+                                    <a href="#" class="sidebar-drop">• Company Setup</a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="#" class="sidebar-drop">• Announcements</a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="#" class="sidebar-drop">• Cost Center</a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="#" class="sidebar-drop">• Deparments</a>
+                                </li>   
+                                <li class="sidebar-item">
+                                    <a href="#" class="sidebar-drop">• Education Level</a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="#" class="sidebar-drop">• Employment Status</a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="#" class="sidebar-drop">• Holiday</a>
+                                </li>  
+                                <li class="sidebar-item">
+                                    <a href="#" class="sidebar-drop">• Leave Count</a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="#" class="sidebar-drop">• Location</a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="#" class="sidebar-drop">• Overtime Type</a>
+                                </li>  
+                                <li class="sidebar-item">
+                                    <a href="#" class="sidebar-drop">• Rest Day</a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="#" class="sidebar-drop">• Rules</a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="#" class="sidebar-drop">• Shift</a>
+                                </li>  
+                                <li class="sidebar-item">
+                                    <a href="#" class="sidebar-drop">• Memo</a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="#" class="sidebar-drop">• Shift</a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="#" class="sidebar-drop">• Certificate</a>
+                                </li>  
+                                <li class="sidebar-item">
+                                    <a href="#" class="sidebar-drop">• Request</a>
+                                </li>  
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<!-- DASHBOARD -->
+<script type="text/html" id="dash-container" >
+    <div class="">
+        <div id="main">
+            <div class="row text-white fw-light">
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-md-4 mb-2">
+                    <div id="cards" class="bg1 border rounded d-flex align-items-center justify-content-between p-3">
+                        <div>
+                            <h3 class="card-title fw-normal">20</h3>
+                            <p class="card-text">LEAVE</p>
+                        </div>
+                        <img id="leave" src="/static/img/leave.png" class="">  
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-md-4 mb-2">
+                    <div id="cards" class="bg2 border rounded d-flex align-items-center justify-content-between p-3">
+                        <div>
+                            <h3 class="card-title fw-normal">30</h3>
+                            <p class="card-text">OVERTIME</p>
+                        </div>
+                        <img src="/static/img/overtime.png"> 
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-md-4 mb-2">
+                    <div id="cards" class="bg3 border rounded d-flex align-items-center justify-content-between p-3">
+                        <div>
+                            <h2 class="card-title fw-normal">45</h2>
+                            <p class="card-text">HOLIDAY & RESTDAY</p>
+                        </div>
+                        <img src="/static/img/holiday.png">   
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-md-4 mb-3">
+                    <div id="cards" class="bg4 border rounded d-flex align-items-center justify-content-between p-3">
+                        <div class="">
+                            <h3 class="card-title fw-normal">13</h3>
+                            <div class="d-flex align-items-center gap-2">
+                                <p class="card-text">NEW EMPLOYEE</p>
+                            </div>
+                        </div>
+                        <img src="/static/img/new.png">   
+                    </div>
+                </div>
+            </div>
+
+            <div id="d-table" class="row text-white fw-light">
+                <div class="col-lg-8 col-md-6 col-sm-12 mb-md-4 mb-3">
+                    <div class="border rounded bg-white md:h-100 h-auto">
+                        <div class="bg1 card-header rounded-top">
+                            <p class="h-100 d-flex align-items-center mx-3">Birthday Celebrants</p>
+                        </div>
+                        
+                        <div class="mx-3 mt-md-4 mt-3 table-responsive">
+                            <div class="overflow-x-auto">
+                                <table class="table w-full text-left" id="table-birthday-celebration" style="width: 100%;">
+                                    <thead class="table-light border-b border-black">
+                                        <tr>
+                                            <th scope="col" class="px-3">Birthday</th>
+                                            <th scope="col" class="px-3 text-nowrap">Employee #</th>
+                                            <th scope="col" class="px-3">Name</th>
+                                            <th scope="col" class="px-3">Department</th>
+                                            <th scope="col" class="px-3">Age</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {{#birthday}}
+                                        <tr class="border-b">
+                                            <td class="px-3 text-nowrap">{{birthday}}</td>
+                                            <td class="px-3 text-nowrap">{{empNo}}</td>
+                                            <td class="px-3 text-nowrap">{{name}}</td>
+                                            <td class="px-3 text-nowrap">{{department}}</td>
+                                            <td class="px-3 text-nowrap">{{age}}</td>
+                                        </tr>
+                                        {{/birthday}}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>  
+
+                        <!-- Pagination -->
+                        <!-- <div id="pagi" class="d-flex justify-content-end mx-md-4 mx-3 mt-1 mb-4"> -->
+                            <!-- <div class="d-flex gap-1"> -->
+                                <!-- <button id="pre-next" class="d-flex align-items-center px-3 py-1 border bg-white" type="Previous">Previous</button> -->
+                                <!-- <button id="pagi-num" class="px-3 py-1 text-center text-white border-0" type="button">1</button>     -->
+                                <!-- <button id="pre-next" class="d-flex align-items-center px-3 border bg-white" type="Previous">Next</button> -->
+                            <!-- </div> -->
+                        <!-- </div>  -->
+                    </div>  
+                </div>
+
+                <!-- CALENDAR -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-md-4 mb-3">
+                    <div class="border rounded bg-white md:h-100 h-auto">
+                        <div class="bg1 card-header rounded-top ">
+                            <p class="h-100 d-flex align-items-center px-3 fw-medium">Calendar</p>
+                        </div>  
+
+                        
+                        <!-- <div class="">
+                            <div id="calendar" class="custom-day-header">
+
+                            </div>
+                        </div> -->
+                        <div id="cal" class="w-full mt-1">
+                            <div>
+                                <div id="month" class="d-flex align-items-center justify-content-between text-black">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                    <span>March 2024</span>    
+                                    <i class="fa-solid fa-chevron-right text-[#107A71] text-sm"></i>
+                                </div>
+                                <div class="w-full flex justify-center text-center px-1">
+                                    <table class="w-100">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" >S</th>
+                                                <th scope="col" >M</th>
+                                                <th scope="col" >T</th>
+                                                <th scope="col" >W</th>
+                                                <th scope="col" >T</th>
+                                                <th scope="col" >F</th>
+                                                <th scope="col" >S</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td scope="col" id="light">25</td>
+                                                <td scope="col" id="light">26</td>
+                                                <td scope="col" id="light">27</th>
+                                                <td scope="col" id="light">28</th>
+                                                <td scope="col" id="light">29</th>
+                                                <td scope="col">1</th>
+                                                <td scope="col">2</th>
+                                            </tr>
+                                            <tr>
+                                                <td scope="col">3</td>
+                                                <td scope="col">4</td>
+                                                <td scope="col">5</th>
+                                                <td scope="col">6</th>
+                                                <td scope="col">7</th>
+                                                <td scope="col">8</th>
+                                                <td scope="col">9</th>
+                                            </tr>
+                                            <tr>
+                                                <td scope="col">10</td>
+                                                <td scope="col">11</td>
+                                                <td scope="col">12</th>
+                                                <td scope="col">13</th>
+                                                <td scope="col">14</th>
+                                                <td scope="col">15</th>
+                                                <td scope="col">16</th>
+                                            </tr>
+                                            <tr>
+                                                <td scope="col">17</td>
+                                                <td scope="col">18</td>
+                                                <td scope="col">19</th>
+                                                <td scope="col">20</th>
+                                                <td scope="col">21</th>
+                                                <td scope="col">22</th>
+                                                <td scope="col">23</th>
+                                            </tr>
+                                            <tr>
+                                                <td scope="col">24</td>
+                                                <td scope="col">25</td>
+                                                <td scope="col">26</th>
+                                                <td scope="col">27</th>
+                                                <td scope="col">28</th>
+                                                <td scope="col">29</th>
+                                                <td scope="col">30</th>
+                                            </tr>
+                                            <tr>
+                                                <td scope="col">31</td>
+                                                <td scope="col" id="light">1</td>
+                                                <td scope="col" id="light">2</th>
+                                                <td scope="col" id="light">3</th>
+                                                <td scope="col" id="light">4</th>
+                                                <td scope="col" id="light">5</th>
+                                                <td scope="col" id="light">6</th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New Employee -->
+            <div id="d-table" class="row text-white fw-light">
+                <div class="col-lg-8 col-md-6 col-sm-12 mb-md-4 mb-3">
+                    <div class="border rounded bg-white md:h-100 h-auto">
+                        <div class="bg3 card-header rounded-top">
+                            <p class="h-100 d-flex align-items-center px-3">New Employee</p>
+                        </div>  
+
+                        <div class="mx-3 mt-md-4 mt-3 table-responsive">
+                            <div class="overflow-x-auto">
+                                <table class="table w-full text-left">
+                                    <thead class="table-light border-b border-black">
+                                        <tr>
+                                            <th scope="col" class="px-4">#</th>
+                                            <th scope="col" class="px-4 text-nowrap">Employee #</th>
+                                            <th scope="col" class="px-5">Name</th>
+                                            <th scope="col" class="px-4">Date Hired</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {{#newemployee}}
+                                        <tr class="border-b">
+                                            <td class="px-4 text-nowrap">{{count}}</td>
+                                            <td class="px-4 text-nowrap">{{empNo}}</td>
+                                            <td class="px-5 text-nowrap">{{name}}</td>
+                                            <td class="px-4 text-nowrap">{{datehired}}</td>
+                                        </tr>
+                                        {{/newemployee}}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Pagination -->
+                        <!-- <div id="pagi" class="d-flex justify-content-end px-4 mt-1 mb-4">
+                            <div class="d-flex gap-1">
+                                <button id="pre-next" class="d-flex align-items-center px-3 py-1 border bg-white" type="Previous">Previous</button>
+                                <button id="pagi-num" class="px-3 py-1 text-center text-white border-0" type="button">1</button>    
+                                <button id="pre-next" class="d-flex align-items-center px-3 border bg-white" type="Previous">Next</button>
+                            </div>
+                        </div>  -->
+                    </div>  
+                </div>
+
+                <!-- Department -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-md-4 mb-2">
+                    <div class="border rounded bg-white md:h-100 h-auto">
+                        <div class="bg3 card-header rounded-top ">
+                            <p class="h-100 d-flex align-items-center px-3 fw-medium">Department</p>
+                        </div>  
+                        <div id="dep" class="px-1 my-md-4 my-3">
+                            <div class="overflow-x-auto">
+                                <table class="w-100">
+                                    <tr>
+                                        <td class="px-3 py-2">ADMIN</td>
+                                        <td class="px-3 py-2 text-center">5</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-3 py-2">SALES</td>
+                                        <td class="px-3 py-2 text-center">20</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-3 py-2">HR</td>
+                                        <td class="px-3 py-2 text-center">3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-3 py-2">TECHNICAL SERVICES</td>
+                                        <td class="px-3 py-2 text-center">10</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-3 py-2">IT SALES</td>
+                                        <td class="px-3 py-2 text-center">10</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-3 py-2">IT SERVICES</td>
+                                        <td class="px-3 py-2 text-center">10</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-3 py-2">IT SOLUTION</td>
+                                        <td class="px-3 py-2 text-center">3</td>
+                                    </tr>
+                                    <tr class="text-end fw-medium">
+                                        <td class="px-1 md:px-0 py-2 fs-6">TOTAL :</td>
+                                        <td class="px-1 md:px-0 py-2 text-center fs-4" style="color: #107A71;">60</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</script>
+
+<!-- MASTER FILE -->
+<script type="text/html" id="master">
+    <div id="back-main" class="h-100 mx-md-4 mx-3 mt-4">
+        <div class="bg-white container-fluid">
+            <div id="text-btn" class="d-flex align-items-center justify-content-between px-md-4 px-3 fw-medium">
+                <span>Employees</span>
+                <button class="rounded border-0 text-white">New</button>
+            </div>
+            <div class="px-md-4 px-3 py-5">
+                <!-- <div id="sort-search" class="d-md-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center gap-2">
+                        <label for="entries">Show</label>
+                        <div class="custom-select-wrapper">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>5</option>
+                                <option value="1">10</option>
+                                <option value="2">20</option>
+                                <option value="3">50</option>
+                                <option value="4">100</option>
+                            </select>
+                        </div>
+                        <label for="entries">Entries</label>
+                    </div>
+                        
+                    <div class="mt-m-0 mt-2">
+                        <div id="search" class="input-group">
+                            <input type="text" class="form-control place-text" placeholder="Search" >
+                            <div class="">
+                                <button class="p-2 px-3 border-0" type="submit">
+                                    <i class="fa-solid fa-magnifying-glass"></i>                                
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="table-responsive">
+                    <table class="table align-middle text-nowrap" id="table-master-file" style="width: 100%;">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Position</th>
+                                <th>Office</th>
+                                <th>Age</th>
+                                <th>Start date</th>
+                                <th>Salary</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Tiger Nixon</td>
+                                <td>System Architect</td>
+                                <td>Edinburgh</td>
+                                <td>61</td>
+                                <td>2011-04-25</td>
+                                <td>$320,800</td>
+                            </tr>
+                            <tr>
+                                <td>Garrett Winters</td>
+                                <td>Accountant</td>
+                                <td>Tokyo</td>
+                                <td>63</td>
+                                <td>2011-07-25</td>
+                                <td>$170,750</td>
+                            </tr>
+                            <tr>
+                                <td>Ashton Cox</td>
+                                <td>Junior Technical Author</td>
+                                <td>San Francisco</td>
+                                <td>66</td>
+                                <td>2009-01-12</td>
+                                <td>$86,000</td>
+                            </tr>
+                            <tr>
+                                <td>Cedric Kelly</td>
+                                <td>Senior Javascript Developer</td>
+                                <td>Edinburgh</td>
+                                <td>22</td>
+                                <td>2012-03-29</td>
+                                <td>$433,060</td>
+                            </tr>
+                            <tr>
+                                <td>Airi Satou</td>
+                                <td>Accountant</td>
+                                <td>Tokyo</td>
+                                <td>33</td>
+                                <td>2008-11-28</td>
+                                <td>$162,700</td>
+                            </tr>
+                            <tr>
+                                <td>Brielle Williamson</td>
+                                <td>Integration Specialist</td>
+                                <td>New York</td>
+                                <td>61</td>
+                                <td>2012-12-02</td>
+                                <td>$372,000</td>
+                            </tr>
+                            <tr>
+                                <td>Herrod Chandler</td>
+                                <td>Sales Assistant</td>
+                                <td>San Francisco</td>
+                                <td>59</td>
+                                <td>2012-08-06</td>
+                                <td>$137,500</td>
+                            </tr>
+                            <tr>
+                                <td>Rhona Davidson</td>
+                                <td>Integration Specialist</td>
+                                <td>Tokyo</td>
+                                <td>55</td>
+                                <td>2010-10-14</td>
+                                <td>$327,900</td>
+                            </tr>
+                            <tr>
+                                <td>Colleen Hurst</td>
+                                <td>Javascript Developer</td>
+                                <td>San Francisco</td>
+                                <td>39</td>
+                                <td>2009-09-15</td>
+                                <td>$205,500</td>
+                            </tr>
+                            <tr>
+                                <td>Sonya Frost</td>
+                                <td>Software Engineer</td>
+                                <td>Edinburgh</td>
+                                <td>23</td>
+                                <td>2008-12-13</td>
+                                <td>$103,600</td>
+                            </tr>
+                            <tr>
+                                <td>Jena Gaines</td>
+                                <td>Office Manager</td>
+                                <td>London</td>
+                                <td>30</td>
+                                <td>2008-12-19</td>
+                                <td>$90,560</td>
+                            </tr>
+                            <tr>
+                                <td>Quinn Flynn</td>
+                                <td>Support Lead</td>
+                                <td>Edinburgh</td>
+                                <td>22</td>
+                                <td>2013-03-03</td>
+                                <td>$342,000</td>
+                            </tr>
+                            <tr>
+                                <td>Charde Marshall</td>
+                                <td>Regional Director</td>
+                                <td>San Francisco</td>
+                                <td>36</td>
+                                <td>2008-10-16</td>
+                                <td>$470,600</td>
+                            </tr>
+                            <tr>
+                                <td>Haley Kennedy</td>
+                                <td>Senior Marketing Designer</td>
+                                <td>London</td>
+                                <td>43</td>
+                                <td>2012-12-18</td>
+                                <td>$313,500</td>
+                            </tr>
+                            <tr>
+                                <td>Tatyana Fitzpatrick</td>
+                                <td>Regional Director</td>
+                                <td>London</td>
+                                <td>19</td>
+                                <td>2010-03-17</td>
+                                <td>$385,750</td>
+                            </tr>
+                            <tr>
+                                <td>Michael Silva</td>
+                                <td>Marketing Designer</td>
+                                <td>London</td>
+                                <td>66</td>
+                                <td>2012-11-27</td>
+                                <td>$198,500</td>
+                            </tr>
+                            <tr>
+                                <td>Paul Byrd</td>
+                                <td>Chief Financial Officer (CFO)</td>
+                                <td>New York</td>
+                                <td>64</td>
+                                <td>2010-06-09</td>
+                                <td>$725,000</td>
+                            </tr>
+                            <tr>
+                                <td>Gloria Little</td>
+                                <td>Systems Administrator</td>
+                                <td>New York</td>
+                                <td>59</td>
+                                <td>2009-04-10</td>
+                                <td>$237,500</td>
+                            </tr>
+                            <tr>
+                                <td>Bradley Greer</td>
+                                <td>Software Engineer</td>
+                                <td>London</td>
+                                <td>41</td>
+                                <td>2012-10-13</td>
+                                <td>$132,000</td>
+                            </tr>
+                            <tr>
+                                <td>Dai Rios</td>
+                                <td>Personnel Lead</td>
+                                <td>Edinburgh</td>
+                                <td>35</td>
+                                <td>2012-09-26</td>
+                                <td>$217,500</td>
+                            </tr>
+                            <tr>
+                                <td>Jenette Caldwell</td>
+                                <td>Development Lead</td>
+                                <td>New York</td>
+                                <td>30</td>
+                                <td>2011-09-03</td>
+                                <td>$345,000</td>
+                            </tr>
+                            <tr>
+                                <td>Yuri Berry</td>
+                                <td>Chief Marketing Officer (CMO)</td>
+                                <td>New York</td>
+                                <td>40</td>
+                                <td>2009-06-25</td>
+                                <td>$675,000</td>
+                            </tr>
+                            <tr>
+                                <td>Caesar Vance</td>
+                                <td>Pre-Sales Support</td>
+                                <td>New York</td>
+                                <td>21</td>
+                                <td>2011-12-12</td>
+                                <td>$106,450</td>
+                            </tr>
+                            <tr>
+                                <td>Doris Wilder</td>
+                                <td>Sales Assistant</td>
+                                <td>Sydney</td>
+                                <td>23</td>
+                                <td>2010-09-20</td>
+                                <td>$85,600</td>
+                            </tr>
+                            <tr>
+                                <td>Angelica Ramos</td>
+                                <td>Chief Executive Officer (CEO)</td>
+                                <td>London</td>
+                                <td>47</td>
+                                <td>2009-10-09</td>
+                                <td>$1,200,000</td>
+                            </tr>
+                            <tr>
+                                <td>Gavin Joyce</td>
+                                <td>Developer</td>
+                                <td>Edinburgh</td>
+                                <td>42</td>
+                                <td>2010-12-22</td>
+                                <td>$92,575</td>
+                            </tr>
+                            <tr>
+                                <td>Jennifer Chang</td>
+                                <td>Regional Director</td>
+                                <td>Singapore</td>
+                                <td>28</td>
+                                <td>2010-11-14</td>
+                                <td>$357,650</td>
+                            </tr>
+                            <tr>
+                                <td>Brenden Wagner</td>
+                                <td>Software Engineer</td>
+                                <td>San Francisco</td>
+                                <td>28</td>
+                                <td>2011-06-07</td>
+                                <td>$206,850</td>
+                            </tr>
+                            <tr>
+                                <td>Fiona Green</td>
+                                <td>Chief Operating Officer (COO)</td>
+                                <td>San Francisco</td>
+                                <td>48</td>
+                                <td>2010-03-11</td>
+                                <td>$850,000</td>
+                            </tr>
+                            <tr>
+                                <td>Shou Itou</td>
+                                <td>Regional Marketing</td>
+                                <td>Tokyo</td>
+                                <td>20</td>
+                                <td>2011-08-14</td>
+                                <td>$163,000</td>
+                            </tr>
+                            <tr>
+                                <td>Michelle House</td>
+                                <td>Integration Specialist</td>
+                                <td>Sydney</td>
+                                <td>37</td>
+                                <td>2011-06-02</td>
+                                <td>$95,400</td>
+                            </tr>
+                            <tr>
+                                <td>Suki Burks</td>
+                                <td>Developer</td>
+                                <td>London</td>
+                                <td>53</td>
+                                <td>2009-10-22</td>
+                                <td>$114,500</td>
+                            </tr>
+                            <tr>
+                                <td>Prescott Bartlett</td>
+                                <td>Technical Author</td>
+                                <td>London</td>
+                                <td>27</td>
+                                <td>2011-05-07</td>
+                                <td>$145,000</td>
+                            </tr>
+                            <tr>
+                                <td>Gavin Cortez</td>
+                                <td>Team Leader</td>
+                                <td>San Francisco</td>
+                                <td>22</td>
+                                <td>2008-10-26</td>
+                                <td>$235,500</td>
+                            </tr>
+                            <tr>
+                                <td>Martena Mccray</td>
+                                <td>Post-Sales support</td>
+                                <td>Edinburgh</td>
+                                <td>46</td>
+                                <td>2011-03-09</td>
+                                <td>$324,050</td>
+                            </tr>
+                            <tr>
+                                <td>Unity Butler</td>
+                                <td>Marketing Designer</td>
+                                <td>San Francisco</td>
+                                <td>47</td>
+                                <td>2009-12-09</td>
+                                <td>$85,675</td>
+                            </tr>
+                            <tr>
+                                <td>Howard Hatfield</td>
+                                <td>Office Manager</td>
+                                <td>San Francisco</td>
+                                <td>51</td>
+                                <td>2008-12-16</td>
+                                <td>$164,500</td>
+                            </tr>
+                            <tr>
+                                <td>Hope Fuentes</td>
+                                <td>Secretary</td>
+                                <td>San Francisco</td>
+                                <td>41</td>
+                                <td>2010-02-12</td>
+                                <td>$109,850</td>
+                            </tr>
+                            <tr>
+                                <td>Vivian Harrell</td>
+                                <td>Financial Controller</td>
+                                <td>San Francisco</td>
+                                <td>62</td>
+                                <td>2009-02-14</td>
+                                <td>$452,500</td>
+                            </tr>
+                            <tr>
+                                <td>Timothy Mooney</td>
+                                <td>Office Manager</td>
+                                <td>London</td>
+                                <td>37</td>
+                                <td>2008-12-11</td>
+                                <td>$136,200</td>
+                            </tr>
+                            <tr>
+                                <td>Jackson Bradshaw</td>
+                                <td>Director</td>
+                                <td>New York</td>
+                                <td>65</td>
+                                <td>2008-09-26</td>
+                                <td>$645,750</td>
+                            </tr>
+                            <tr>
+                                <td>Olivia Liang</td>
+                                <td>Support Engineer</td>
+                                <td>Singapore</td>
+                                <td>64</td>
+                                <td>2011-02-03</td>
+                                <td>$234,500</td>
+                            </tr>
+                            <tr>
+                                <td>Bruno Nash</td>
+                                <td>Software Engineer</td>
+                                <td>London</td>
+                                <td>38</td>
+                                <td>2011-05-03</td>
+                                <td>$163,500</td>
+                            </tr>
+                            <tr>
+                                <td>Sakura Yamamoto</td>
+                                <td>Support Engineer</td>
+                                <td>Tokyo</td>
+                                <td>37</td>
+                                <td>2009-08-19</td>
+                                <td>$139,575</td>
+                            </tr>
+                            <tr>
+                                <td>Thor Walton</td>
+                                <td>Developer</td>
+                                <td>New York</td>
+                                <td>61</td>
+                                <td>2013-08-11</td>
+                                <td>$98,540</td>
+                            </tr>
+                            <tr>
+                                <td>Finn Camacho</td>
+                                <td>Support Engineer</td>
+                                <td>San Francisco</td>
+                                <td>47</td>
+                                <td>2009-07-07</td>
+                                <td>$87,500</td>
+                            </tr>
+                            <tr>
+                                <td>Serge Baldwin</td>
+                                <td>Data Coordinator</td>
+                                <td>Singapore</td>
+                                <td>64</td>
+                                <td>2012-04-09</td>
+                                <td>$138,575</td>
+                            </tr>
+                            <tr>
+                                <td>Zenaida Frank</td>
+                                <td>Software Engineer</td>
+                                <td>New York</td>
+                                <td>63</td>
+                                <td>2010-01-04</td>
+                                <td>$125,250</td>
+                            </tr>
+                            <tr>
+                                <td>Zorita Serrano</td>
+                                <td>Software Engineer</td>
+                                <td>San Francisco</td>
+                                <td>56</td>
+                                <td>2012-06-01</td>
+                                <td>$115,000</td>
+                            </tr>
+                            <tr>
+                                <td>Jennifer Acosta</td>
+                                <td>Junior Javascript Developer</td>
+                                <td>Edinburgh</td>
+                                <td>43</td>
+                                <td>2013-02-01</td>
+                                <td>$75,650</td>
+                            </tr>
+                            <tr>
+                                <td>Cara Stevens</td>
+                                <td>Sales Assistant</td>
+                                <td>New York</td>
+                                <td>46</td>
+                                <td>2011-12-06</td>
+                                <td>$145,600</td>
+                            </tr>
+                            <tr>
+                                <td>Hermione Butler</td>
+                                <td>Regional Director</td>
+                                <td>London</td>
+                                <td>47</td>
+                                <td>2011-03-21</td>
+                                <td>$356,250</td>
+                            </tr>
+                            <tr>
+                                <td>Lael Greer</td>
+                                <td>Systems Administrator</td>
+                                <td>London</td>
+                                <td>21</td>
+                                <td>2009-02-27</td>
+                                <td>$103,500</td>
+                            </tr>
+                            <tr>
+                                <td>Jonas Alexander</td>
+                                <td>Developer</td>
+                                <td>San Francisco</td>
+                                <td>30</td>
+                                <td>2010-07-14</td>
+                                <td>$86,500</td>
+                            </tr>
+                            <tr>
+                                <td>Shad Decker</td>
+                                <td>Regional Director</td>
+                                <td>Edinburgh</td>
+                                <td>51</td>
+                                <td>2008-11-13</td>
+                                <td>$183,000</td>
+                            </tr>
+                            <tr>
+                                <td>Michael Bruce</td>
+                                <td>Javascript Developer</td>
+                                <td>Singapore</td>
+                                <td>29</td>
+                                <td>2011-06-27</td>
+                                <td>$183,000</td>
+                            </tr>
+                            <tr>
+                                <td>Donna Snider</td>
+                                <td>Customer Support</td>
+                                <td>New York</td>
+                                <td>27</td>
+                                <td>2011-01-25</td>
+                                <td>$112,000</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Name</th>
+                                <th>Position</th>
+                                <th>Office</th>
+                                <th>Age</th>
+                                <th>Start date</th>
+                                <th>Salary</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                  </div>
+
+                <!-- Pagination -->
+                <!-- <div id="m-pagi" class="d-flex justify-content-between mt-2">
+                    <span id="show">SHOWING 21-30 OF 100</span>
+                    <div class="d-flex gap-1">
+                        <button id="pre-next" class="d-flex align-items-center px-3 py-1 border bg-white" type="Previous">Previous</button>
+                        <button id="pagi-num" class="px-3 py-1 text-center text-white border-0" type="button">1</button>    
+                        <button id="pagi-num" class="d-flex align-items-center px-3 py-1 border bg-white" type="button">2</button>    
+                        <button id="pagi-num" class="d-flex align-items-center px-3 py-1 border bg-white" type="button">3</button>    
+                        <button id="pre-next" class="d-flex align-items-center px-3 py-1 border bg-white" type="Previous">Next</button>
+                    </div>
+                </div>  -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- <div id="back-main">
+        <div class="bg-white h-full"> -->
+            <!-- <div id="text-btn" class="d-flex align-items-center justify-content-between px-md-4 px-3 fw-medium">
+                <span>Employees</span>
+                <button class="rounded border-0 text-white">New</button>
+            </div> -->
+
+            <!-- <div class="px-md-4 px-3 py-4">
+                <div id="sort-search" class="d-md-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center gap-2">
+                        <label for="entries">Show</label>
+                        <div class="custom-select-wrapper">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>5</option>
+                                <option value="1">10</option>
+                                <option value="2">20</option>
+                                <option value="3">50</option>
+                                <option value="4">100</option>
+                            </select>
+                        </div>
+                        <label for="entries">Entries</label>
+                    </div>
+                        
+                    <div class="mt-m-0 mt-2">
+                        <div id="search" class="input-group">
+                            <input type="text" class="form-control place-text" placeholder="Search" >
+                            <div class="">
+                                <button class="p-2 px-3 border-0" type="submit">
+                                    <i class="fa-solid fa-magnifying-glass"></i>                                
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-3 table-responsive">
+                    <div id="m-table" class="overflow-x-auto">
+                        <table class="table w-full text-left">
+                            <thead class="table-light border-b border-black bg-white">
+                                <tr class="align-middle">
+                                    <th scope="col" class="px-3">#</th>
+                                    <th scope="col" class="px-3 text-nowrap">Employee #</th>
+                                    <th scope="col" class="px-3">Name</th>
+                                    <th scope="col" class="px-3">Cost Center</th>
+                                    <th scope="col" class="px-3">Access</th>
+                                    <th scope="col" class="px-3">Rule</th>
+                                    <th scope="col" class="px-3">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody class="align-middle">
+                                <tr class="border-b">
+                                    <td class="px-3 center-align">1</td>
+                                    <td class="px-3 center-align">0001</td>
+                                    <td class="px-3 center-align">A. Goc-ong</td>
+                                    <td class="px-3 center-align">Avasia Information Systems, Inc. - Executive</td>
+                                    <td class="px-3 center-align">Employee</td>
+                                    <td class="px-3 center-align">9:00 AM - 6:00 PM (with Grace Period)</td>
+                                    <td class="px-3 center-align">Employee</td>
+                                </tr>
+                                    <tr class="border-b">
+                                        <td class="px-3">2</td>
+                                        <td class="px-3">0002</td>
+                                        <td class="px-3">A. Goc-ong</td>
+                                        <td class="px-3">Avasia Information Systems, Inc. - Executive</td>
+                                        <td class="px-3">Administrator</td>
+                                        <td class="px-3">9:00 AM - 6:00 PM (with Grace Period)</td>
+                                        <td class="px-3">Employee</td>
+                                    </tr>
+                                    <tr class="border-b">
+                                        <td class="px-3">3</td>
+                                        <td class="px-3">0003</td>
+                                        <td class="px-3">A. Goc-ong</td>
+                                        <td class="px-3">Avasia Information Systems, Inc. - Executive</td>
+                                        <td class="px-3">Administrator</td>
+                                        <td class="px-3">9:00 AM - 6:00 PM (with Grace Period)</td>
+                                        <td class="px-3">Employee</td>
+                                    </tr>
+                                    <tr class="border-b">
+                                        <td class="px-3">4</td>
+                                        <td class="px-3">0004</td>
+                                        <td class="px-3">A. Goc-ong</td>
+                                        <td class="px-3">Avasia Information Systems, Inc. - Executive</td>
+                                        <td class="px-3">Employee</td>
+                                        <td class="px-3">9:00 AM - 6:00 PM (with Grace Period)</td>
+                                        <td class="px-3">Employee</td>
+                                    </tr>
+                                    <tr class="border-b">
+                                        <td class="px-3">5</td>
+                                        <td class="px-3">0005</td>
+                                        <td class="px-3">A. Goc-ong</td>
+                                        <td class="px-3">Avasia Information Systems, Inc. - Executive</td>
+                                        <td class="px-3">Employee</td>
+                                        <td class="px-3">9:00 AM - 6:00 PM (with Grace Period)</td>
+                                        <td class="px-3">Employee</td>
+                                    </tr>
+                                    <tr class="border-b">
+                                        <td class="px-3">6</td>
+                                        <td class="px-3">0006</td>
+                                        <td class="px-3">A. Goc-ong</td>
+                                        <td class="px-3">Avasia Information Systems, Inc. - Executive</td>
+                                        <td class="px-3">Employee</td>
+                                        <td class="px-3">9:00 AM - 6:00 PM (with Grace Period)</td>
+                                        <td class="px-3">Employee</td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                Pagination
+                <div id="m-pagi" class="d-flex justify-content-between mt-1">
+                    <span id="show">SHOWING 21-30 OF 100</span>
+                    <div class="d-flex gap-1">
+                        <button id="pre-next" class="d-flex align-items-center px-3 py-1 border bg-white" type="Previous">Previous</button>
+                        <button id="pagi-num" class="px-3 py-1 text-center text-white border-0" type="button">1</button>    
+                        <button id="pagi-num" class="d-flex align-items-center px-3 py-1 border bg-white" type="button">2</button>    
+                        <button id="pagi-num" class="d-flex align-items-center px-3 py-1 border bg-white" type="button">3</button>    
+                        <button id="pre-next" class="d-flex align-items-center px-3 py-1 border bg-white" type="Previous">Next</button>
+                    </div>
+                </div> 
+            </div> -->
+        </div>
+    </div>
+</script>
+
+
+<script type="text/html" id="resume">
+    <div>ssss</div>
+</script>
