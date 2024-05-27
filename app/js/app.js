@@ -234,7 +234,8 @@ $(document).ready(function(){
             //     evaluation: evaluationList
 			// }			
             // console.log(templateData);
-            App.canvas.html("").append($.Mustache.render("dash-container",templateData));
+            // App.canvas.html("").append($.Mustache.render("dash-container",templateData));
+            App.canvas.html("").append($.Mustache.render("dash-container"));
             $('#table-birthday-celebration').DataTable();
         });
 
