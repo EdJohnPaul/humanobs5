@@ -4,8 +4,8 @@ $(document).ready(function(){
         sideCanvas : $("#sideCanvas"),
         canvas : $("#canvas"),
         navCanvas : $("#navCanvas"),
-        api     : Config.url + "/api",
-        path    : Config.url + "/humano",
+        // api     : Config.url + "/api",
+        // path    : Config.url + "/humano",
         toggleSidebar : function(){
             $(document).ready(function(){
                 $('#toggle-sidebar').on('click', function(){
@@ -175,65 +175,65 @@ $(document).ready(function(){
 
         
         Path.map('#/dashboard/').to(function(){
-            var newsfeed = getJSONDoc(App.api + "/read/newsfeed/" + App.token);
-			var newsfeedList = [];			
-			$.each(newsfeed, function(i, item){
-				var newsfeeds = {
-					uid: item.uid,
-					author: item.author,
-					content: item.content,
-					pubdate: item.pubdate
-				}
-				newsfeedList.push(newsfeeds);
-			});
+            // var newsfeed = getJSONDoc(App.api + "/read/newsfeed/" + App.token);
+			// var newsfeedList = [];			
+			// $.each(newsfeed, function(i, item){
+			// 	var newsfeeds = {
+			// 		uid: item.uid,
+			// 		author: item.author,
+			// 		content: item.content,
+			// 		pubdate: item.pubdate
+			// 	}
+			// 	newsfeedList.push(newsfeeds);
+			// });
 
-            var evaluations = getJSONDoc(App.api + "/get/employee/evaluations/");
-            var evaluationList = [];          
-            $.each(evaluations, function(i, item){
-                // console.log(item)
-                var evaluations = {
-                    empNo: item.emp_uid,
-                    fname: item.empfirstname,
-                       lname: item.emplastname,
-                    nextEval: item.next_evaluation,
-                }
-                evaluationList.push(evaluations);
-            });
+            // var evaluations = getJSONDoc(App.api + "/get/employee/evaluations/");
+            // var evaluationList = [];          
+            // $.each(evaluations, function(i, item){
+            //     // console.log(item)
+            //     var evaluations = {
+            //         empNo: item.emp_uid,
+            //         fname: item.empfirstname,
+            //            lname: item.emplastname,
+            //         nextEval: item.next_evaluation,
+            //     }
+            //     evaluationList.push(evaluations);
+            // });
 			
-			var birthday = getJSONDoc(App.api + "/get/employee/birthdays/");
-			var birthdayList = [];			
-			$.each(birthday, function(i, item){
-				var birthdays = {
-					empNo: item.employeeNo,
-					name: item.employeeName,
-					birthday: item.birthday,
-                    department: item.department,
-					age: item.age
-				}
-				birthdayList.push(birthdays);
-			});
+			// var birthday = getJSONDoc(App.api + "/get/employee/birthdays/");
+			// var birthdayList = [];			
+			// $.each(birthday, function(i, item){
+			// 	var birthdays = {
+			// 		empNo: item.employeeNo,
+			// 		name: item.employeeName,
+			// 		birthday: item.birthday,
+            //         department: item.department,
+			// 		age: item.age
+			// 	}
+			// 	birthdayList.push(birthdays);
+			// });
 			
-			var newemployees = getJSONDoc(App.api + "/get/new/hired/employees/");
-			var newemployeeList = [];			
-			var ctr = 0;
-			$.each(newemployees, function(i, item){
-				ctr++;
-				var newemployee = {
-					count: ctr,
-					empNo: item.employeeNo,
-					name: item.employeeName,
-					datehired: item.dateHired
-				}
-				newemployeeList.push(newemployee);
-			});
+			// var newemployees = getJSONDoc(App.api + "/get/new/hired/employees/");
+			// var newemployeeList = [];			
+			// var ctr = 0;
+			// $.each(newemployees, function(i, item){
+			// 	ctr++;
+			// 	var newemployee = {
+			// 		count: ctr,
+			// 		empNo: item.employeeNo,
+			// 		name: item.employeeName,
+			// 		datehired: item.dateHired
+			// 	}
+			// 	newemployeeList.push(newemployee);
+			// });
 			
-			var templateData = {
-				newsfeed: newsfeedList,
-				birthday: birthdayList,
-				newemployee: newemployeeList,
-                evaluation: evaluationList
-			}			
-            console.log(templateData);
+			// var templateData = {
+			// 	newsfeed: newsfeedList,
+			// 	birthday: birthdayList,
+			// 	newemployee: newemployeeList,
+            //     evaluation: evaluationList
+			// }			
+            // console.log(templateData);
             App.canvas.html("").append($.Mustache.render("dash-container",templateData));
             $('#table-birthday-celebration').DataTable();
         });
